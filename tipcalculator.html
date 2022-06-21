@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- BASICS TO MAKE WEBSITE RESPONSIVE-->
+            <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+            <title>TIP CALCULATOR</title>
+            <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;900&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="css/main.css" />
+        <!-- Normalize.ccs -->
+        <link rel="stylesheet" type="text/css" href="normalize.css">
+        <!-- Custom Styles  -->
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <!--[if IE]>
+        <script src="html5shim.googlecode.com/svn/trunk/html5.js">
+        </script>
+        <![endif]-->
+    </head>
+
+    <body>  
+
+        <div id="container">
+            <h1>Tip Calculator</h1>
+
+            <div id="calculator">
+                
+                <form>
+                    <label>
+                        How much was your bill? <br>
+                        $ <input type="text" id="billAmount">
+                    </label>
+                    <label>
+                        How was your service?<br>
+                        <select id="serviceQuality">
+                            <option disabled selected value="0">-- CHOOSE AN OPTION --</option>
+                            <option value="0.3">30% Excellent service</option>
+                            <option value="0.2">20% Awesome service</option>
+                            <option value="0.15">15% Okay service</option>
+                            <option value="0.05">5% Terrible service</option>
+                        </select>
+                    </label>
+                    <label>
+                        How many people are sharing the bill?
+                        <input type="text" id="totalPeople"> people <br>
+                    </label>
+                    <button type="button" id="calculate">Calculate!</button>
+                </form>
+
+            </div> <!-- calculator -->
+            <div id="totalTip">
+                <sup>$</sup><span id="tip">0</span>
+                <small id="each">each</small>
+            </div><!-- totalTip-->
+        </div> <!-- container -->
+
+    <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
